@@ -10,7 +10,7 @@ load_dotenv()
 # 허깅페이스 토큰 및 데이터셋 주소
 hf_token = os.getenv('HF_TOKEN')
 hf_repo = os.getenv('HF_DATASET_REPO', 'hyokwan/familicare_health_pro_knowledge')
-parent_dir = os.getenv('DATASET_PARENT_DIR', '../dataset/전문의료')  # 예: 'dataset/전문의료'
+parent_dir = os.getenv('DATASET_PARENT_DIR', '../dataset/01. 필수의학')  # 예: 'dataset/전문의료'
 
 # __file__이 없는 환경(Jupyter 등)에서도 동작하도록 처리
 try:
