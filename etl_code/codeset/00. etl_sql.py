@@ -30,18 +30,7 @@ def next_day(input_date, delta):
     return next_date
 
 
-# ### 일별로 예측 단 일별로 누락이 없어야 하며 각 일자별로 오전/오후/새벽 구분 예측 또한 요일 반영
-
-# In[7]:
-
-
 paramData = pd.read_csv("../dataset/datasource.csv")
-
-
-# In[8]:
-
-# dbprefix, dbuser, dbip, dbport, dbname, 
-# In[9]:
 
 
 # incremental/full 옵션 처리
@@ -49,9 +38,6 @@ targetSeg = "famili"
 
 # datasource.csv에서 mode 값 읽기
 mode = paramData.loc[(paramData.seg == targetSeg) & (paramData.param == "mode")].data.values[0]
-
-
-# In[10]:
 
 
 conPrefix = paramData.loc[ (paramData.seg==targetSeg) &\
@@ -73,8 +59,6 @@ coDbName = paramData.loc[ (paramData.seg==targetSeg) &\
                 (paramData.param=="dbname")].data.values[0]
 
 
-# In[11]:
-
 
 dbConn = "{}://{}:{}@{}:{}/{}".format(conPrefix,conUserId,conUserPw,coDbIp,coDbPort,coDbName)
 
@@ -92,9 +76,6 @@ currentDate = datetime.now().strftime('%Y-%m-%d')
 currentDate
 
 engine = create_engine(dbConn) 
-
-
-# In[14]:
 
 
 # PostgreSQL 연결 설정
