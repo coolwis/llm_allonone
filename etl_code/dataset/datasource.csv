@@ -1,0 +1,17 @@
+seg,param,seq,data
+common,dbprefix,1,postgresql
+common,dbuser,1,postgres
+common,dbpw,1,postgres
+common,dbip,1,127.0.0.1
+common,dbport,1,5432
+common,dbname,1,postgres
+common,glucose,1,fmd_trend_analysis_blood_glucose
+common,mode,full
+famili,dbprefix,1,postgresql
+famili,dbuser,1,fmco_user
+famili,dbpw,1,fmco_pwd
+famili,dbip,1,192.168.0.xxx
+famili,dbport,1,5432
+famili,dbname,1,fmco
+famili,glucose,1,fmd_trend_analysis_blood_glucose
+famili,mode,full
